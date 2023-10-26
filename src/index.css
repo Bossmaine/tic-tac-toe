@@ -69,9 +69,12 @@ h1 {
 
 #players li {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 50%;
   border: 2px solid transparent;
+  text-align: center;
 }
 
 #players.highlight-player li.active {
@@ -171,7 +174,7 @@ ol {
 
 #game-board ol {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 2rem;
   margin: 0;
@@ -179,12 +182,12 @@ ol {
 }
 
 #game-board button {
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   border: none;
   background: #aca788;
   color: #3f3b00;
-  font-size: 5rem;
+  font-size: 3rem;
   cursor: pointer;
   font-family: 'Caprasimo', cursive;
   padding: 1rem;
@@ -347,5 +350,22 @@ ol {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (min-width: 500px) {
+  #game-container {
+    width: 40%;
+    height: 50vh;
+  }
+
+  #players li {
+    flex-direction: row; 
+  }
+
+  #game-board button {
+    width: 8rem;
+    height: 8rem;
+    font-size: 5rem;
   }
 }
