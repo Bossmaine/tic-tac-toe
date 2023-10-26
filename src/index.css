@@ -354,10 +354,6 @@ ol {
 }
 
 @media (min-width: 500px) {
-  #game-container {
-    max-height: 100vh;
-  }
-
   #players li {
     flex-direction: row; 
   }
